@@ -16,7 +16,7 @@ class News extends CI_Controller {
 
        // $this->load->view('templates/header', $data);
         $this->load->view('news/index', $data);
-      //  $this->load->view('templates/footer', $data);
+    
        }
 
         public function view($slug = NULL)
@@ -30,9 +30,9 @@ class News extends CI_Controller {
 
         $data['title'] = $data['news_item']['title'];
 
-        $this->load->view('templates/header', $data);
+        
         $this->load->view('news/view', $data);
-        $this->load->view('templates/footer', $data);
+      
         }
 
         public function create()
@@ -56,9 +56,9 @@ class News extends CI_Controller {
         {
             
             $this->news_model->set_news();
-            $this->load->view('templates/header', $data);
+           
             $this->load->view('news/success');
-            $this->load->view('templates/footer', $data);
+           
         }
         }
 
